@@ -37,10 +37,8 @@ namespace Template.Application.Services
             {
                 Id = Guid.NewGuid(),
                 Email = userViewModel.Email,
-                Name = userViewModel.Name,
-                DateCreated = DateTime.Now,
-                IsDeleted = false,
-                DateUpdated = null
+                Name = userViewModel.Name
+               
 
             };
         this.userRepository.Create( _user );
