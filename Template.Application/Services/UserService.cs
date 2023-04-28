@@ -29,5 +29,23 @@ namespace Template.Application.Services
 
             return _userviewModels;
         }
+
+        public bool Post(UserViewModel userViewModel)
+        {
+            //mapeamento manual antes de usar o AutoMapper
+            User _user = new User
+            {
+                Id = Guid.NewGuid(),
+                Email = userViewModel.Email,
+                Name = userViewModel.Name,
+                DateCreated = DateTime.Now,
+                IsDeleted = false,
+                DateUpdated = null
+
+            };
+        this.userRepository.Create( _user );
+
+            return true;
+        }
     }
 }
