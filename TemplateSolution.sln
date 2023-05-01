@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template", "Template\Template.csproj", "{D5E690DF-C196-465C-9E03-1EBC96E0DC47}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template", "Template\Template.csproj", "{D5E690DF-C196-465C-9E03-1EBC96E0DC47}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "1-Web", "1-Web", "{E4F6FC89-2B58-4743-BA32-428C568DCA53}"
 EndProject
@@ -13,17 +13,19 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3-Domain", "3-Domain", "{45
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4-Infra", "4-Infra", "{48C89668-0BFF-4634-B909-38BB5AE6E905}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Application", "Template.Application\Template.Application.csproj", "{7EF75E70-AD15-40B9-8C2B-61FC6E561301}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Application", "Template.Application\Template.Application.csproj", "{7EF75E70-AD15-40B9-8C2B-61FC6E561301}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Domain", "Template.Domain\Template.Domain.csproj", "{E4AFBA90-1195-43B3-AD16-9D31B1BEC2E6}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Domain", "Template.Domain\Template.Domain.csproj", "{E4AFBA90-1195-43B3-AD16-9D31B1BEC2E6}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.1-Data", "4.1-Data", "{F031F026-E729-49C8-B86C-92E33D436DB5}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2-CrossCutting", "4.2-CrossCutting", "{9924B2BC-69DD-4734-AA90-DB6FB2682182}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Data", "Template.Data\Template.Data.csproj", "{93BAD90E-96E7-4AC3-A312-6BB1FE67E2EE}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Data", "Template.Data\Template.Data.csproj", "{93BAD90E-96E7-4AC3-A312-6BB1FE67E2EE}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.IoC", "Template.IoC\Template.IoC.csproj", "{C5EBEEE9-0D77-4D0C-9A9A-66AEC51AC0D9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.IoC", "Template.IoC\Template.IoC.csproj", "{C5EBEEE9-0D77-4D0C-9A9A-66AEC51AC0D9}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Swagger", "Template.Swagger\Template.Swagger.csproj", "{5298D50C-027B-4678-B090-B4986BA6A5AD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -51,6 +53,10 @@ Global
 		{C5EBEEE9-0D77-4D0C-9A9A-66AEC51AC0D9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C5EBEEE9-0D77-4D0C-9A9A-66AEC51AC0D9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C5EBEEE9-0D77-4D0C-9A9A-66AEC51AC0D9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5298D50C-027B-4678-B090-B4986BA6A5AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5298D50C-027B-4678-B090-B4986BA6A5AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5298D50C-027B-4678-B090-B4986BA6A5AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5298D50C-027B-4678-B090-B4986BA6A5AD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -63,6 +69,7 @@ Global
 		{9924B2BC-69DD-4734-AA90-DB6FB2682182} = {48C89668-0BFF-4634-B909-38BB5AE6E905}
 		{93BAD90E-96E7-4AC3-A312-6BB1FE67E2EE} = {F031F026-E729-49C8-B86C-92E33D436DB5}
 		{C5EBEEE9-0D77-4D0C-9A9A-66AEC51AC0D9} = {9924B2BC-69DD-4734-AA90-DB6FB2682182}
+		{5298D50C-027B-4678-B090-B4986BA6A5AD} = {9924B2BC-69DD-4734-AA90-DB6FB2682182}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E00729FD-C4BE-4E66-AFB9-D01A1F1F9CA4}
