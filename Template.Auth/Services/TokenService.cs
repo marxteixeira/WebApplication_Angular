@@ -37,5 +37,6 @@ namespace Template.Auth.Services
 
             return claims.FindFirst(field).Value;
         }
+
     }
 }
