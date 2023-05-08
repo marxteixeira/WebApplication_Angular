@@ -29,6 +29,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Swagger", "Templat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Auth", "Template.Auth\Template.Auth.csproj", "{280E9966-7666-42B9-9431-A7992C8E024D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "0 - Tests", "0 - Tests", "{72013978-2497-4AA3-8C8E-ED2DD0FCAD55}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Application.Tests", "Template.Application.Tests\Template.Application.Tests.csproj", "{C4DCD10C-9019-4A29-B9AD-8E4F3665B12D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -63,6 +67,10 @@ Global
 		{280E9966-7666-42B9-9431-A7992C8E024D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{280E9966-7666-42B9-9431-A7992C8E024D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{280E9966-7666-42B9-9431-A7992C8E024D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C4DCD10C-9019-4A29-B9AD-8E4F3665B12D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C4DCD10C-9019-4A29-B9AD-8E4F3665B12D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C4DCD10C-9019-4A29-B9AD-8E4F3665B12D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C4DCD10C-9019-4A29-B9AD-8E4F3665B12D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -77,6 +85,7 @@ Global
 		{C5EBEEE9-0D77-4D0C-9A9A-66AEC51AC0D9} = {9924B2BC-69DD-4734-AA90-DB6FB2682182}
 		{5298D50C-027B-4678-B090-B4986BA6A5AD} = {9924B2BC-69DD-4734-AA90-DB6FB2682182}
 		{280E9966-7666-42B9-9431-A7992C8E024D} = {9924B2BC-69DD-4734-AA90-DB6FB2682182}
+		{C4DCD10C-9019-4A29-B9AD-8E4F3665B12D} = {72013978-2497-4AA3-8C8E-ED2DD0FCAD55}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E00729FD-C4BE-4E66-AFB9-D01A1F1F9CA4}

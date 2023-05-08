@@ -49,6 +49,9 @@ namespace Template.Application.Services
 
             };*/
 
+            if (userViewModel.Id != Guid.Empty)
+                throw new Exception("User ID must be empty");
+
             User _user = mapper.Map<User>(userViewModel);   
 
             this.userRepository.Create( _user );
