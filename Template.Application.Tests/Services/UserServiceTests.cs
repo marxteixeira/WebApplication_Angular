@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using Template.Application.Services;
+using Template.Application.ViewModels;
 using Template.Domain.Interfaces;
 using Xunit;
 
@@ -18,11 +19,43 @@ namespace Template.Application.Tests.Services
             userService = new UserService(new Mock<IUserRepository>().Object, new Mock<IMapper>().Object);
         }
 
+        #region ValidatingSendingID
+
         [Fact]
         public void Post_SendingValidID()
         {
             var exception = Assert.Throws<Exception>(() => userService.Post(new ViewModels.UserViewModel { Id = Guid.NewGuid() }));
             Assert.Equal("User ID must be empty", exception.Message);
         }
+
+        [Fact]
+        public void GetById_SendingEmptyGuid()
+        {
+            var exception = Assert.Throws<Exception>(() => userService.GetById(""));
+            Assert.Equal("UserID is not valid", exception.Message);
+        }
+
+        [Fact]
+        public void Put_SendingEmptyGuid()
+        {
+            var exception = Assert.Throws<Exception>(() => userService.Put(new UserViewModel()));
+            Assert.Equal("ID is invalid", exception.Message);
+        }
+
+        [Fact]
+        public void Delete_SendingEmptyGuid()
+        {
+            var exception = Assert.Throws<Exception>(() => userService.Delete(""));
+            Assert.Equal("UserID is not valid", exception.Message);
+        }
+
+        [Fact]
+        public void Authenticate_SendingEmptyValues()
+        {
+            var exception = Assert.Throws<Exception>(() => userService.Authenticate(new UserAuthenticateRequestViewModel()));
+            Assert.Equal("Email/Password are required.", exception.Message);
+        }
+
+        #endregion
     }
 }
