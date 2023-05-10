@@ -28,10 +28,40 @@ export class UsersComponent implements OnInit {
         })
     }
 
+    save() {
+        debugger;
+        if (this.user.id) {
+            this.put();
+        } else {
+            this.post();
+        }
+    }
+
+    openDetails(user) {
+        console.log(user);
+        this.showList = false;
+        this.user = user;
+    }
+
     post() {
         this.userDataService.post(this.user).subscribe(data => {
             if (data) {
                 alert("Usuário cadastrado com sucesso");
+                this.get();
+                this.user = {};
+            } else {
+                alert("Erro ao cadastrar usuário");
+            }
+        }, error => {
+            console.log(error);
+            alert('Erro interno do sistema');
+        })
+    }
+
+    put() {
+        this.userDataService.put(this.user).subscribe(data => {
+            if (data) {
+                alert("Usuário atualizado com sucesso");
                 this.get();
                 this.user = {};
             } else {
