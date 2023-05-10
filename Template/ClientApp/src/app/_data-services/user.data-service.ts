@@ -12,4 +12,8 @@ export class UserDataService {
         this.http.get(this.module).subscribe()
     }
 
+    post(data) {
+        return this.http.post(this.module, data);
+    }
+
 }
