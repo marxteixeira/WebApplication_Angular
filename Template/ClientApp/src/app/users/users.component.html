@@ -1,1 +1,20 @@
-<p>Users</p>
+<p>Users ({{users?.length}})</p>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th scope="col">Actions</th>
+            <th scope="col">ID</th>
+            <th scope="col">Name</th>
+            <th scope="col">Email</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngfor="let user of users">
+            <th scope="row"><button class="btn-primary">Editar</button></th>
+            <th scope="row">{{user.id}}1</th>
+            <th scope="row">{{user.name}}1</th>
+            <th scope="row">{{user.email}}1</th>
+        </tr>
+    </tbody>
+</table>

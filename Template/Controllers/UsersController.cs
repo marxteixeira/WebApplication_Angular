@@ -19,7 +19,7 @@ namespace Template.Controllers
             this.userService = userService;
         }
 
-        [HttpGet]
+        [HttpGet,AllowAnonymous]
         public IActionResult Get()
         {
 
