@@ -29,7 +29,7 @@ export class UsersComponent implements OnInit {
     }
 
     save() {
-        debugger;
+       // debugger;
         if (this.user.id) {
             this.put();
         } else {
@@ -38,12 +38,13 @@ export class UsersComponent implements OnInit {
     }
 
     openDetails(user) {
-        console.log(user);
+       // console.log(user);
         this.showList = false;
         this.user = user;
     }
 
     post() {
+        console.log(this.user);  
         this.userDataService.post(this.user).subscribe(data => {
             if (data) {
                 alert("Usuário cadastrado com sucesso");

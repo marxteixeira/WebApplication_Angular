@@ -9,7 +9,7 @@ export class UserDataService {
     constructor(private http: HttpClient) { }
 
     get() {
-        this.http.get(this.module).subscribe()
+        return this.http.get(this.module);
     }
 
     post(data) {
