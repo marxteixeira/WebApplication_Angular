@@ -47,12 +47,12 @@ namespace Template.Controllers
             return Ok(this.userService.Put(userViewModel));
         }
 
-        [HttpDelete]
-        public IActionResult Delete()
+        [HttpDelete("{userId}"), AllowAnonymous]
+        public IActionResult Delete(string userId)
         {
-            string _userId = TokenService.GetValueFromClaim(HttpContext.User.Identity, ClaimTypes.NameIdentifier);
+            //string _userId = TokenService.GetValueFromClaim(HttpContext.User.Identity, ClaimTypes.NameIdentifier);
 
-            return Ok(this.userService.Delete(_userId));
+            return Ok(this.userService.Delete(userId));
         }
 
         [HttpPost("authenticate"),AllowAnonymous]

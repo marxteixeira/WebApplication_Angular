@@ -66,11 +66,26 @@ export class UsersComponent implements OnInit {
                 this.get();
                 this.user = {};
             } else {
-                alert("Erro ao cadastrar usuário");
+                alert("Erro ao atualizar o usuário");
             }
         }, error => {
             console.log(error);
             alert('Erro interno do sistema');
+        })
+    }
+
+    delete() {
+        this.userDataService.delete().subscribe(data => {
+            if (data) {
+                alert('Usuário excluído com sucesso');
+                this.get();
+                this.user = {};
+            } else {
+                alert('Erro ao excluir usuário');
+            }
+        }, error => {
+            console.log(error);
+            alert('erro interno do sistema');
         })
     }
 
