@@ -1,7 +1,11 @@
-﻿using Microsoft.AspNetCore.Authorization;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Claims;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using System.Security.Claims;
 using Template.Application.Interfaces;
 using Template.Application.ViewModels;
 using Template.Auth.Services;
@@ -12,6 +16,7 @@ namespace Template.Controllers
     [ApiController, Authorize]
     public class UsersController : ControllerBase
     {
+
         private readonly IUserService userService;
 
         public UsersController(IUserService userService)
@@ -19,10 +24,9 @@ namespace Template.Controllers
             this.userService = userService;
         }
 
-        [HttpGet,AllowAnonymous]
+        [HttpGet]
         public IActionResult Get()
         {
-
             return Ok(this.userService.Get());
         }
 
@@ -36,26 +40,26 @@ namespace Template.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult GetById (string id)
+        public IActionResult GetById(string id)
         {
             return Ok(this.userService.GetById(id));
         }
 
-        [HttpPut, AllowAnonymous]
+        [HttpPut]
         public IActionResult Put(UserViewModel userViewModel)
         {
             return Ok(this.userService.Put(userViewModel));
         }
 
-        [HttpDelete("{userId}"), AllowAnonymous]
-        public IActionResult Delete(string userId)
+        [HttpDelete]
+        public IActionResult Delete()
         {
-            //string _userId = TokenService.GetValueFromClaim(HttpContext.User.Identity, ClaimTypes.NameIdentifier);
+            string _userId = TokenService.GetValueFromClaim(HttpContext.User.Identity, ClaimTypes.NameIdentifier);
 
-            return Ok(this.userService.Delete(userId));
+            return Ok(this.userService.Delete(_userId));
         }
 
-        [HttpPost("authenticate"),AllowAnonymous]
+        [HttpPost("authenticate"), AllowAnonymous]
         public IActionResult Authenticate(UserAuthenticateRequestViewModel userViewModel)
         {
             return Ok(this.userService.Authenticate(userViewModel));

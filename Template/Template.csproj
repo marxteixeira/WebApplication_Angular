@@ -40,6 +40,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <None Remove="ClientApp\src\app\app.interceptor.module.ts" />
     <None Remove="ClientApp\src\app\_data-services\user.data-service.ts" />
   </ItemGroup>
 
